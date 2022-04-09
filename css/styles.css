@@ -1,0 +1,106 @@
+:root {
+  /*** COLORS ***/
+  --gray-1: #333333;
+  --gray-2: #4F4F4F;
+  --gray-3: #828282;
+  --gray-4: #BDBDBD;
+  --gray-bg-1: #f2f2f2;
+  --gray-bg-2: #E0E0E0;
+  --blue: #2D9CDB;
+  --red: #EB5757;
+  --green: #27AE60;
+
+
+  --fontPrincipal: 'Poppins', sans-serif;
+  --fontLogo: 'Heebo', sans-serif;
+
+
+
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #f2f2f2;
+  font-family: var(--fontPrincipal);
+}
+
+body {
+  width: 100vw;
+}
+
+.container {
+  max-width: 1200px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem !important;
+}
+
+.menu {
+  display: flex;
+  width: 65%;
+  justify-content: space-between;
+  transition: 0.5s ease;
+}
+
+.link {
+  
+  font-size: 1.5rem;
+  list-style: none;
+}
+.logo {
+  color: var(--gray-1);
+  font-size: 36px;
+}
+
+.link > a {
+  color: var(--gray-1);
+  text-decoration: none;
+}
+
+.show {
+  right: 0 !important;
+  margin-right: 50px;
+  gap: 20px;
+  
+}
+
+.burger-menu {
+  font-size: 36px;
+  margin-top: 10px;
+  color: black;
+  display: none !important;
+}
+
+@media  screen and (max-width: 1000px) {
+  .menu{
+    position: fixed;
+    top:55px;
+    right: -100%;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .burger-menu {
+    
+    display: inline-block !important;
+  }
+
+  header {
+    align-items: flex-start;
+    height: 50vh;
+  }
+}
